@@ -1,74 +1,706 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
-    <title>GOMAS - UI/UX Project</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOMAS - UX Case Study & Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial;
-        }
+    <!-- Memuat Google Fonts (Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-        table {
-            width: 100%;
-            height: 600px;
-            border-collapse: collapse;
-        }
+    <!-- FontAwesome CDN untuk Ikon Vector Premium -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        td {
-            vertical-align: top;
-            padding: 10px;
-        }
-
-        .menu {
-            width: 20%;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
-
+    <!-- Memuat file CSS Eksternal -->
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 
-    <table border="1">
+    <!-- ==========================================================================
+       [EDIT DI SINI] NAVBAR (NAVIGASI ATAS)
+       Ganti teks logo, link navigasi, atau tambahkan menu baru di bawah ini.
+       ========================================================================== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="logo">
+                <i class="fa-solid fa-truck-fast" style="color: var(--color-primary);"></i> GOMAS
+            </a>
 
-        <tr>
+            <!-- Menu Navigasi Desktop -->
+            <div class="nav-links">
+                <a href="#empathize" class="active">Empathize</a>
+                <a href="#define">Define</a>
+                <a href="#ideate">Ideate</a>
+                <a href="#prototype">Prototype</a>
+                <a href="#test">Test</a>
+            </div>
 
-            <td class="menu">
+            <!-- Tombol Hamburger Menu untuk Layar HP -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">&#9776;</button>
+        </div>
+    </nav>
 
-                <nav>
-                    <ul>
-                        <li><a href="latihan_1_1.html" target="frame">Halaman 1</a></li>
-                        <li><a href="latihan_1_2.html" target="frame">Halaman 2</a></li>
-                        <li><a href="latihan_1_3.html" target="frame">Halaman 3</a></li>
-                        <li><a href="latihan_1_4.html" target="frame">Halaman 4</a></li>
-                        <li><a href="latihan_1_5.html" target="frame">Halaman 5</a></li>
-                        <li><a href="latihan_1_6.html" target="frame">Halaman 6</a></li>
-                        <li><a href="latihan_1_7.html" target="frame">Halaman 7</a></li>
-                        <li><a href="latihan_1_8.html" target="frame">Halaman 8</a></li>
-                        <li><a href="latihan_1_9.html" target="frame">Halaman 9</a></li>
-                        <li><a href="latihan_1_10.html" target="frame">Halaman 10</a></li>
+    <!-- Menu Navigasi Layar HP (Mobile) -->
+    <div class="mobile-menu">
+        <a href="#empathize">Empathize</a>
+        <a href="#define">Define</a>
+        <a href="#ideate">Ideate</a>
+        <a href="#prototype">Prototype</a>
+        <a href="#test">Test</a>
+    </div>
+
+
+    <!-- ==========================================================================
+       [EDIT DI SINI] HERO SECTION (HALAMAN UTAMA)
+       Ganti Judul utama, deskripsi, gambar mockup, dan tautan Figma di bawah ini.
+       ========================================================================== -->
+    <header id="hero" class="hero">
+        <!-- Lingkaran Aksen Awan Bercahaya (Efek Blur Latar Belakang) -->
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <!-- Logo GOMAS / Judul Projek Portofolio -->
+                <h1>
+                    <span
+                        style="font-size: clamp(3rem, 7vw, 4.5rem); font-weight: 900; background: linear-gradient(135deg, #ffffff 0%, var(--color-accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Selamat Datang di GOMAS
+                    </span>
+                </h1>
+
+                <!-- Paragraf Sub-judul (Edit teks ini untuk mengubah perkenalan projek) -->
+                <p class="hero-text">
+                    Antar barang cepat, aman, dan sampai tujuan. Studi kasus UX untuk merancang ulang sistem pemesanan
+                    kurir
+                    pengiriman barang yang simpel dan tepercaya.
+                </p>
+
+                <!-- Tombol Aksi (Edit link 'href' untuk mengarahkan ke bagian figma/desain Anda) -->
+                <div class="hero-buttons">
+                    <a href="#prototype" class="btn"
+                        style="background-color: var(--color-primary); color: var(--color-white);">
+                        Coba Prototype
+                    </a>
+                    <!-- Ganti link href di bawah ini dengan link File Project Figma Anda -->
+                    <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer" class="btn"
+                        style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: var(--color-white);">
+                        <i class="fa-brands fa-figma" style="margin-right: 8px;"></i> File Projek Figma
+                    </a>
+                </div>
+            </div>
+
+            <!-- Showcase Mockup HP GOMAS (Tiga mockup layar HP menggunakan gambar yang dihasilkan) -->
+            <div class="hero-showcase reveal">
+                <!-- Mockup 1: Welcome / Onboarding Screen -->
+                <div class="mockup-phone">
+                    <img src="assets/images/gomas_hero.png" alt="GOMAS Onboarding Screen">
+                </div>
+                <!-- Mockup 2: Home Screen -->
+                <div class="mockup-phone">
+                    <img src="assets/images/gomas_home.png" alt="GOMAS Home Screen">
+                </div>
+                <!-- Mockup 3: Booking/Order Screen -->
+                <div class="mockup-phone">
+                    <img src="assets/images/gomas_booking.png" alt="GOMAS Booking Screen">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ==========================================================================
+       [EDIT DI SINI] METADATA & DESIGN GOALS
+       Ubah data durasi projek, tools yang dipakai, dan tujuan perancangan desain.
+       ========================================================================== -->
+    <main class="container" style="margin-top: -3rem; position: relative; z-index: 10;">
+
+        <!-- Informasi Singkat Projek (Stats) -->
+        <div class="stats-grid reveal">
+            <!-- Card Durasi -->
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(0, 98, 255, 0.1); color: var(--color-primary);">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div>
+                    <div class="stat-title">Timeline</div>
+                    <div class="stat-value">4 Minggu</div>
+                </div>
+            </div>
+
+            <!-- Card Tools -->
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--color-success);">
+                    <i class="fa-brands fa-figma"></i>
+                </div>
+                <div>
+                    <div class="stat-title">Tools</div>
+                    <div class="stat-value">Figma & FigJam</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner "Kenapa GOMAS?" -->
+        <div class="banner-dark reveal">
+            <div class="banner-dark-glow"></div>
+            <div class="container">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; align-items: center;">
+                    <!-- Penjelasan Proyek -->
+                    <div>
+                        <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.1;">
+                            Kenapa <span style="color: var(--color-primary);">GOMAS?</span>
+                        </h2>
+                        <p
+                            style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                            Proyek ini berfokus pada penyederhanaan alur pengiriman paket. Banyak pengguna merasa
+                            aplikasi logistik
+                            saat ini terlalu membingungkan dengan menu promosi yang padat dan formulir alamat yang
+                            bertele-tele.
+                        </p>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;">
+                            Tujuannya adalah merancang pengalaman yang tepercaya dan instan, agar pengguna dari segala
+                            umur dapat
+                            mengirimkan barang tanpa hambatan dalam 3 langkah mudah.
+                        </p>
+                    </div>
+
+                    <!-- Design Goals (Tujuan Desain) -->
+                    <div class="design-goals-container">
+                        <h3
+                            style="color: var(--color-white); font-size: 1.8rem; margin-bottom: 0.5rem; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                            Design Goals
+                        </h3>
+                        <!-- Goal 1 -->
+                        <div class="goal-item">
+                            <div class="goal-bullet"></div>
+                            <div>
+                                <h4 class="goal-title">Instan & Cepat</h4>
+                                <p class="goal-desc">Memotong waktu pengisian alamat formulir hingga 40% dengan alamat
+                                    favorit cerdas.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Goal 2 -->
+                        <div class="goal-item">
+                            <div class="goal-bullet"></div>
+                            <div>
+                                <h4 class="goal-title">Desain Inklusif</h4>
+                                <p class="goal-desc">Ikon besar, kontras warna biru yang tinggi, dan teks yang mudah
+                                    dibaca oleh
+                                    pengguna paruh baya.</p>
+                            </div>
+                        </div>
+                        <!-- Goal 3 -->
+                        <div class="goal-item">
+                            <div class="goal-bullet"></div>
+                            <div>
+                                <h4 class="goal-title">Transparansi Lacak</h4>
+                                <p class="goal-desc">Menampilkan status kurir dan foto bukti penyerahan barang secara
+                                    real-time demi
+                                    rasa aman.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ==========================================================================
+       [EDIT DI SINI] SECTION 1: EMPATHIZE (PEMAHAMAN USER)
+       Ubah deskripsi riset wawancara, link iframe board figma, dan hasil insights.
+       ========================================================================== -->
+        <section id="empathize" class="section reveal">
+            <h2 class="section-title">1. Empathize</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">
+                Untuk memahami frustrasi dan kebutuhan dalam pengiriman barang, kami melakukan wawancara langsung serta
+                observasi kepada tiga tipe pengguna aktif: merchant UMKM, ibu rumah tangga, dan mahasiswa.
+            </p>
+
+            <!-- Figma Board/FigJam Embed (Ganti tautan src di bawah ini dengan tautan FigJam Anda) -->
+            <div class="figma-embed-container">
+                <iframe
+                    src="https://embed.figma.com/board/FcAzOcTVViPivVGj7FmhxT/user-things?node-id=0-1&embed-host=share"
+                    allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Hasil Wawancara & Metodologi -->
+            <div class="grid-responsive" style="margin-top: 3rem;">
+                <!-- Card Kiri: Metodologi -->
+                <div class="card">
+                    <h3 style="margin-bottom: 1.5rem;"><i class="fa-solid fa-microscope"
+                            style="color: var(--color-primary); margin-right: 8px;"></i> Metodologi Riset</h3>
+                    <ul class="list-study">
+                        <li><strong>Wawancara Mendalam (1-on-1 Interview):</strong> Menggali kecemasan user saat
+                            mengirim barang
+                            berharga.</li>
+                        <li><strong>Observasi Pengguna (User Observation):</strong> Mengamati cara pengguna paruh baya
+                            mengetik
+                            alamat pengiriman di HP.</li>
+                        <li><strong>Analisis Kompetitor (Competitive Analysis):</strong> Membandingkan alur checkout 3
+                            aplikasi
+                            pengiriman teratas.</li>
                     </ul>
-                </nav>
+                </div>
 
-            </td>
+                <!-- Card Kanan: Insights Utama -->
+                <div class="card">
+                    <h3 style="margin-bottom: 1.5rem;"><i class="fa-solid fa-lightbulb"
+                            style="color: var(--color-primary); margin-right: 8px;"></i> Key Interview Insights</h3>
+                    <ul class="list-study" style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.8rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.8rem;">
+                            <strong style="color: var(--color-primary);"><i class="fa-solid fa-circle-exclamation"></i>
+                                Alamat Terlalu
+                                Rumit:</strong>
+                            <br>User sering salah memilih kelurahan/kecamatan karena menu pencarian drop-down yang
+                            membingungkan.
+                        </li>
+                        <li style="margin-bottom: 0.8rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.8rem;">
+                            <strong style="color: var(--color-primary);"><i class="fa-solid fa-circle-exclamation"></i>
+                                Kuatir Paket
+                                Rusak:</strong>
+                            <br>Kurangnya informasi jaminan asuransi yang jelas membuat user cemas saat mengirim barang
+                            elektronik.
+                        </li>
+                        <li>
+                            <strong style="color: var(--color-primary);"><i class="fa-solid fa-circle-exclamation"></i>
+                                Tombol Chat
+                                Kurir Tersembunyi:</strong>
+                            <br>User kesulitan menghubungi kurir karena tombol telepon/chat tersembunyi di balik menu
+                            detail yang
+                            dalam.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <td width="80%">
 
-                <iframe name="frame"></iframe>
+        <!-- ==========================================================================
+       [EDIT DI SINI] SECTION 2: DEFINE (PENDEFINISIAN MASALAH)
+       Ubah problem statement, poin HMW (How Might We), dan prioritas fitur utama.
+       ========================================================================== -->
+        <section id="define" class="section reveal"
+            style="background: #ffffff; border-radius: 30px; padding: 4rem 2rem; margin: 4rem 0;">
+            <h2 class="section-title">2. Define</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">
+                Dari data wawancara, kami memetakan masalah utama pengguna dan merumuskan peluang solusi melalui metode
+                HMW.
+            </p>
 
-            </td>
+            <div class="grid-responsive">
+                <!-- Problem Statement -->
+                <div class="card">
+                    <h3
+                        style="color: var(--color-primary); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 1rem;">
+                        Problem Statement
+                    </h3>
+                    <p
+                        style="font-size: 1.15rem; font-weight: 600; line-height: 1.7; color: var(--color-secondary); font-style: italic;">
+                        "Pengirim paket pemula dan orang tua merasa kesulitan menggunakan aplikasi karena antarmuka yang
+                        penuh
+                        dengan iklan promosi, alur pengisian alamat yang panjang, serta minimnya transparansi lacak
+                        kurir."
+                    </p>
+                </div>
 
-        </tr>
+                <!-- HMW (How Might We) -->
+                <div class="card">
+                    <h3
+                        style="color: var(--color-primary); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 1rem;">
+                        How Might We (HMW)
+                    </h3>
+                    <ul class="list-study" style="list-style: none; padding-left: 0; font-size: 1.05rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>HMW 1:</strong> Bagaimana kita bisa membuat formulir
+                            pengisian
+                            alamat penerima menjadi lebih instan dan bebas galat?</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>HMW 2:</strong> Bagaimana kita bisa mendesain UI yang
+                            bersih dan
+                            ramah untuk pengguna gaptek?</li>
+                        <li><strong>HMW 3:</strong> Bagaimana kita menampilkan status kurir dan asuransi dengan
+                            transparan untuk
+                            meningkatkan rasa percaya?</li>
+                    </ul>
+                </div>
+            </div>
 
-    </table>
+            <!-- Prioritas Fitur GOMAS -->
+            <div class="card" style="margin-top: 2.5rem; background: var(--color-bg);">
+                <h3 style="color: var(--color-secondary); margin-bottom: 1rem;">Prioritas Masalah & Solusi</h3>
+                <p style="font-size: 1.05rem; margin-bottom: 1rem;">
+                    Kami fokus pada fitur-fitur berimpak tinggi yang dapat langsung menyelesaikan frustrasi utama
+                    pengguna:
+                </p>
+                <ul class="list-study">
+                    <li><strong>One-Tap Shipping Address:</strong> Tombol pintas untuk memilih alamat kantor, rumah, dan
+                        kontak
+                        favorit.</li>
+                    <li><strong>Real-time Map tracking with Photo Proof:</strong> Tampilan peta pelacakan kurir langsung
+                        dengan
+                        tombol pintas telepon di layar beranda.</li>
+                    <li><strong>Clear Insurance Toggle:</strong> Opsi asuransi sekali klik di halaman ringkasan dengan
+                        penulisan
+                        premi yang transparan.</li>
+                </ul>
+            </div>
+        </section>
 
+
+        <!-- ==========================================================================
+       [EDIT DI SINI] SECTION 3: IDEATE (EKSPLORASI IDE & FLOW)
+       Ubah link embedding figma untuk Crazy 8's, Low-Fidelity, User Flow, dll.
+       ========================================================================== -->
+        <section id="ideate" class="section reveal">
+            <h2 class="section-title">3. Ideate</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 4rem; font-size: 1.2rem;">
+                Tahap eksplorasi ide solusi secara visual, mulai dari sketsa kasar hingga rancangan arsitektur informasi
+                aplikasi.
+            </p>
+
+            <!-- Tautan Embed Iframe Figma (Ganti src di setiap kartu dengan tautan Figma file Anda) -->
+
+            <!-- 1. Crazy 8's Sketches -->
+            <div style="margin-bottom: 4rem;">
+                <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--color-secondary);">
+                    <i class="fa-solid fa-bolt" style="color: var(--color-primary); margin-right: 8px;"></i> Crazy 8's
+                    Sketches
+                </h3>
+                <div class="figma-embed-container">
+                    <iframe
+                        src="https://embed.figma.com/board/6EFT5B2btexMvK8EQQ967t/crazy-8?node-id=0-1&embed-host=share"
+                        allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- 2. Low-Fidelity & Wireframe -->
+            <div style="margin-bottom: 4rem;">
+                <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--color-secondary);">
+                    <i class="fa-solid fa-pencil" style="color: var(--color-primary); margin-right: 8px;"></i>
+                    Low-Fidelity
+                    Sketches
+                </h3>
+                <div class="figma-embed-container">
+                    <iframe
+                        src="https://embed.figma.com/design/UbzCGFMQ10F2UssI8xyJLd/low-fidelity?node-id=0-1&embed-host=share"
+                        allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- 3. User Flow -->
+            <div style="margin-bottom: 4rem;">
+                <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--color-secondary);">
+                    <i class="fa-solid fa-diagram-project" style="color: var(--color-primary); margin-right: 8px;"></i>
+                    User Flow
+                    Pemesanan
+                </h3>
+                <div class="figma-embed-container">
+                    <iframe
+                        src="https://embed.figma.com/design/8Yro3zqwlzzcG78aJHa3gj/Untitled?node-id=0-1&embed-host=share"
+                        allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- 4. UI Kit & Design System -->
+            <div>
+                <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--color-secondary);">
+                    <i class="fa-solid fa-palette" style="color: var(--color-primary); margin-right: 8px;"></i> UI Kit &
+                    Design
+                    System GOMAS
+                </h3>
+                <div class="figma-embed-container">
+                    <iframe
+                        src="https://embed.figma.com/design/My76yuawwNfUExc42KKWi7/uikit?node-id=0-1&embed-host=share"
+                        allowfullscreen loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+       [EDIT DI SINI] SECTION 4: PROTOTYPE (HIGH-FIDELITY FIGMA INTERACTIVE)
+       Ganti link figma prototype embed src agar sesuai dengan figma proto GOMAS Anda.
+       ========================================================================== -->
+        <section id="prototype" class="section reveal"
+            style="background-color: var(--color-secondary); color: var(--color-white); border-radius: 30px; padding: 5rem 2rem; margin: 4rem 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 class="section-title" style="color: var(--color-white);">4. Prototype</h2>
+                    <p style="max-width: 700px; margin: 0 auto; color: var(--color-accent); font-size: 1.2rem;">
+                        Saya membangun prototipe high-fidelity interaktif GOMAS di Figma untuk memvisualisasikan alur
+                        pengiriman
+                        paket.
+                    </p>
+                </div>
+
+                <!-- Figma Interactive Prototype Embed Frame -->
+                <div class="figma-embed-container" style="box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: none;">
+                    <!-- Ganti link src di bawah ini dengan link Prototype Figma Anda (pastikan format /proto/...) -->
+                    <iframe
+                        src="https://embed.figma.com/proto/kQv6QsKg068GB6MImx3HUJ/244311031_Achmad-Alvin-Al-Falah_UI-UX-Transportation?node-id=661-10394&starting-point-node-id=661%3A10394&embed-host=share"
+                        allowfullscreen loading="lazy"
+                        style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;">
+                    </iframe>
+                </div>
+
+                <!-- Tombol Buka Full Screen Prototype -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <!-- Ganti link href di bawah ini dengan link figma prototype full screen Anda -->
+                    <a href="https://www.figma.com/proto/kQv6QsKg068GB6MImx3HUJ/244311031_Achmad-Alvin-Al-Falah_UI-UX-Transportation?node-id=661-10394&starting-point-node-id=661%3A10394&embed-host=share"
+                        target="_blank" rel="noopener noreferrer" class="btn"
+                        style="background-color: var(--color-primary); color: var(--color-white);">
+                        Buka di Figma (Full Screen)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+       [EDIT DI SINI] SECTION 5: TEST (PENGUJIAN & FEEDBACK)
+       Ubah data nama tester, task list pengujian, feedback, dan hasil improvement.
+       ========================================================================== -->
+        <section id="test" class="section reveal">
+            <h2 class="section-title">5. Test</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem; font-size: 1.2rem;">
+                Kami menguji prototipe GOMAS menggunakan metode Usability Testing dengan skenario tugas pengiriman
+                barang.
+            </p>
+
+            <!-- Baris Pengujian: Profil Tester & Metode -->
+            <div class="grid-responsive" style="gap: 3rem; margin: 3rem 0; align-items: start;">
+                <!-- Card Kiri: Foto & Profil Responden -->
+                <div>
+                    <!-- Ilustrasi Mockup User / Foto Responden (Dihasilkan secara lokal) -->
+                    <div class="card"
+                        style="padding: 2rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <div
+                            style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 3px solid var(--color-accent); margin-bottom: 1.5rem;">
+                            <!-- Menggunakan gambar kurir sebagai perwakilan / Anda dapat mengganti gambarnya -->
+                            <img src="assets/images/gomas_hero.png" alt="Usability Tester"
+                                style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <h4 style="font-weight: 800; fontSize: 1.2rem; margin-bottom: 0.25rem;">Iqbal Abdullah</h4>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 1rem;">Mahasiswa, 19 Tahun</p>
+                        <p
+                            style="font-size: 0.95rem; color: var(--color-primary); font-style: italic; font-weight: 600;">
+                            "Jarang menggunakan aplikasi pengiriman paket secara mandiri."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Kanan: Metode & Hasil Task Table -->
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <!-- Penjelasan Pendek Metode -->
+                    <div class="card" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1rem; color: var(--color-secondary);"><i class="fa-solid fa-flask"
+                                style="color: var(--color-primary); margin-right: 8px;"></i> Metode Testing</h3>
+                        <ul class="list-study" style="font-size: 1rem;">
+                            <li><strong>Skenario:</strong> "Anda ingin mengirimkan paket berupa dokumen penting ke
+                                alamat teman dengan
+                                segera. Temukan cara tercepat memesan kurir motor di aplikasi."</li>
+                            <li><strong>Teknik:</strong> Task-based Usability Testing & Wawancara kualitatif pasca-tes.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hasil Pengujian Task Table -->
+            <div class="card" style="margin-bottom: 3rem;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--color-secondary);"><i class="fa-solid fa-list-check"
+                        style="color: var(--color-primary); margin-right: 8px;"></i> Hasil Pengujian Skenario Tugas</h3>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tugas / Alur (Task)</th>
+                                <th>Status</th>
+                                <th>Catatan & Temuan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Membuka App & Beranda GOMAS</td>
+                                <td><span class="badge-success">✅ Berhasil</span></td>
+                                <td>User langsung mengenali tombol menu "Kirim Paket" karena ukuran ikon yang cukup
+                                    besar.</td>
+                            </tr>
+                            <tr>
+                                <td>Mengisi Alamat Pickup & Alamat Penerima</td>
+                                <td><span class="badge-success">✅ Berhasil</span></td>
+                                <td>Fitur autocomplete alamat berfungsi baik, mempercepat pengetikan alamat tujuan.</td>
+                            </tr>
+                            <tr>
+                                <td>Memilih Layanan Pengiriman (Motor/Mobil)</td>
+                                <td><span class="badge-success">✅ Berhasil</span></td>
+                                <td>Informasi harga dan estimasi waktu sampai tertulis dengan jelas.</td>
+                            </tr>
+                            <tr>
+                                <td>Lacak Posisi Kurir di Peta</td>
+                                <td><span class="badge-success">✅ Berhasil</span></td>
+                                <td>User menyukai visual ikon kurir yang bergerak dinamis di peta.</td>
+                            </tr>
+                            <tr>
+                                <td>Menemukan Tombol Hubungi Kurir</td>
+                                <td><span style="color: var(--color-danger); font-weight: 700;">⚠️ Ada Kendala</span>
+                                </td>
+                                <td>User sempat kebingungan mencari tombol chat karena diletakkan di dalam halaman
+                                    detail kurir yang
+                                    kecil.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Feedback & Iterasi Desain -->
+            <div class="grid-responsive" style="margin-bottom: 3rem;">
+                <!-- Card Kiri: Feedback Pengguna -->
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;"><i class="fa-solid fa-comments"
+                            style="color: var(--color-primary); margin-right: 8px;"></i> Feedback Pengguna</h3>
+                    <div style="margin-bottom: 1.5rem;">
+                        <p style="font-weight: 700; margin-bottom: 0.5rem;">Q1: Seberapa mudah Anda memahami informasi
+                            tarif
+                            pengiriman?</p>
+                        <p
+                            style="font-style: italic; color: #555; border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+                            "Sangat jelas, rincian biaya asuransi dan ongkir dipisah dengan baik sehingga tidak ada
+                            biaya siluman."
+                        </p>
+                    </div>
+                    <div>
+                        <p style="font-weight: 700; margin-bottom: 0.5rem;">Q2: Apa hambatan terbesar saat menggunakan
+                            prototype?
+                        </p>
+                        <p
+                            style="font-style: italic; color: #555; border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+                            "Saya kesulitan saat ingin membatalkan pesanan atau chat kurir karena tombolnya kecil
+                            sekali."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Rerata: Improvement (Before vs After) -->
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;"><i class="fa-solid fa-wrench"
+                            style="color: var(--color-primary); margin-right: 8px;"></i> Hasil & Perbaikan Desain</h3>
+                    <div style="line-height: 1.7;">
+                        <p style="margin-bottom: 1rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 1rem;">
+                            <strong style="color: var(--color-danger);"><i class="fa-solid fa-circle-xmark"></i> Sebelum
+                                Perbaikan:</strong>
+                            <br>Tombol hubungi kurir (chat/telepon) diletakkan di pojok kanan bawah dalam bentuk ikon
+                            bulat kecil
+                            tanpa teks penjelasan.
+                        </p>
+                        <p>
+                            <strong style="color: var(--color-success);"><i class="fa-solid fa-circle-check"></i>
+                                Setelah
+                                Perbaikan:</strong>
+                            <br>Kami merancang ulang bar info kurir di bagian bawah peta dengan tombol aksi berwarna
+                            biru bertuliskan
+                            "Hubungi Kurir" di samping nama kurir untuk akses sekali klik.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kesimpulan Akhir Portofolio -->
+            <div class="card"
+                style="background: #eef5ff; border: 1px solid rgba(0, 98, 255, 0.15); box-shadow: 0 10px 30px rgba(0, 98, 255, 0.05);">
+                <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Kesimpulan Studi Kasus</h3>
+                <p style="font-size: 1.1rem; lineHeight: 1.8;">
+                    Prototipe aplikasi **GOMAS** terbukti berhasil secara fungsional mempermudah dan mempercepat alur
+                    pengiriman
+                    barang. Dengan penyederhanaan antarmuka pengguna (UI) serta perbaikan pada tombol aksi penting,
+                    pengguna
+                    pemula dapat melakukan pemesanan dengan percaya diri tanpa rasa cemas. Langkah pengembangan
+                    portofolio
+                    berikutnya akan difokuskan pada penambahan opsi e-wallet dan notifikasi cerdas.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================================================
+       [EDIT DI SINI] CREATOR PROFILE (PROFIL PEMBUAT PORTFOLIO)
+       Ganti Nama, NIM, Kelas, Foto, dan tautan sosial media Anda di bawah ini.
+       ========================================================================== -->
+    <section class="section profile-section">
+        <div class="container">
+            <div class="profile-card reveal">
+                <!-- Foto Anda (Masukkan file foto Anda ke assets/images/foto.jpg dan ganti src di bawah) -->
+                <div class="profile-img-container">
+                    <img src="assets/images/gomas_hero.png" alt="Afid Setiawan">
+                </div>
+
+                <!-- Identitas Mahasiswa (Ganti nama & NIM Anda di bawah ini) -->
+                <h2 style="font-size: 2.2rem; margin-bottom: 0.25rem;">Afid Setiawan</h2>
+                <div class="profile-nim">NIM. 253307056</div>
+
+                <!-- Detail Kelas & Mata Kuliah (Edit info kelas di bawah ini) -->
+                <p
+                    style="color: #666; line-height: 1.8; max-width: 600px; margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 500;">
+                    Mahasiswa Kelas 2B<br>
+                    Program Studi Teknik Informatika<br>
+                    Mata Kuliah: UI/UX (Projek UAS UI/UX)
+                </p>
+
+                <!-- Tautan Sosial Media (Ganti link href sosial media Anda di bawah ini) -->
+                <div class="social-links">
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+                        style="color: #0077b5;" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+                        style="color: #e1306c;" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+                        style="color: #333;" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       [EDIT DI SINI] FOOTER WEBSITE (BAGIAN DASAR)
+       Ubah nama pembuat di footer di bawah ini.
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container" style="position: relative; z-index: 10; text-align: center;">
+            <p class="footer-copy">
+                Designed with <span style="color: #ff4d4d;">❤</span> by <strong>Afid Setiawan</strong> &copy; 2026. UAS
+                UI/UX.
+            </p>
+        </div>
+        <!-- Logo Raksasa di Latar Belakang (Dapat diubah) -->
+        <div class="footer-logo-text">GOMAS</div>
+    </footer>
+
+    <!-- Memuat Script Javascript Eksternal -->
+    <script src="assets/script.js"></script>
 </body>
 
 </html>
